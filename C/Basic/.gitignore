@@ -1,8 +1,0 @@
-# Ignore everything in this folder by default
-*
-# Allow directories so nested .c files can be tracked
-!*/
-# Allow C sources
-!*.c
-# Keep this ignore file
-!.gitignore
