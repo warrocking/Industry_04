@@ -1,5 +1,5 @@
 /*
-    문제 요약 : 포인터 배열의 값을 출력하는 함수
+    문제 요약 : 함수 포인터를 사용한 함수 호출
 
     문제 설명
     -
@@ -15,31 +15,33 @@
 #include <string.h>
 
 // 함수 선언
-void print_str(char **pps, int cnt)
+int sum(int a, int b)
 {
-    for (int i = 0; i < cnt; i++)
-    {
-        printf("%s\n", pps[i]);
-    }
-    printf("\n");
+    return (a + b);
 }
-
+int minus(int a, int b)
+{
+    if (a > b)
+        return (a - b);
+    else
+        return (b - a);
+}
 int main(void)
 {
     // 변수 선언 및 초기화
-    char *ptr_ary[] = {
-        "eagle",
-        "tiger",
-        "lion",
-        "squirrel"};
-    int count;
+    int (*fp)(int, int); // 함수 포인터 선언
+    int res;
+
     // 데이터 준비 및 입력
-    count = sizeof(ptr_ary) / sizeof(ptr_ary[0]); // 배열 요소의 갯수 공식
 
     // 로직 처리
-    print_str(ptr_ary, count);
 
     // 결과 출력
+    fp = sum;
+    printf("result : %d\n", fp(10, 20));
+
+    fp = minus;
+    printf("result : %d\n", fp(10, 20));
 
     // 함수종료
     return 0;
