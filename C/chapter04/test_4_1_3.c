@@ -1,9 +1,12 @@
 /*
-    제작 시간 : 0221_20:37
-    유형 : 예제
-    제목 : 중첩된 if문
+    제작 시간 : 0221_18:11
+    유형 : 연습
+    제목 : p127 3번
 
-    개념
+    문제 설명) : 태희가 신청한 전체 학점과 평점을 계산해 시청 학점이 10학점 이상이고 평점 평균이 4.0을 넘는 경우 1출력, 아니면 0출력
+    - 국어 kor , 영어 eng , 수학 mat , 전체 학점 credits , 결과 저장 res , 국어 평점 ksocre , 영어 평점 escore , 수학평점 msores, 평점 평균 grade
+    -
+    -
     -
 */
 
@@ -31,23 +34,31 @@
 int main(void)
 {
     /* 변수 선언 및 초기화 */
-    int a = 20, b = 10;
+    int kor = 0;
+    int eng = 0;
+    int mat = 0;
+    int credits = 0;
+    int res = 0;
+    double kscore = 0;
+    double escore = 0;
+    double mscore = 0;
+    double grade = 0;
 
     /*        입 력       */
+    kor = 3;
+    eng = 5;
+    mat = 4;
+    credits = kor + eng + mat;
+    kscore = 3.8;
+    escore = 4.4;
+    mscore = 3.9;
+    grade = (kscore + escore + mscore) / 3.0;
 
     /*        처 리       */
-    // if(a>10)
-    // {
-    //     if(b>=0)
-    //         b=1;
-    //     else
-    //         b=-1;
-    // }
-
-    b = (a > 10) ? ((b >= 0) ? 1 : -1) : b;
+    res = (credits >= 10 && grade >= 4.0) ? 1 : 0;
+    printf("결과 : %d\n", res);
 
     /*        출 력       */
-    printf("a : %d, b : %d\n", a, b);
 
     /* 함수 종료 */
     return 0;

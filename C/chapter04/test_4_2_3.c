@@ -1,10 +1,10 @@
 /*
-    제작 시간 : 0221_20:37
-    유형 : 예제
-    제목 : 중첩된 if문
+    제작 시간 : 0221_18:35
+    유형 : 연습
+    제목 : p146 2
 
-    개념
-    -
+    문제 설명
+    - 시간 입력 후 몇시간 몇분 몇초인지 출력
 */
 
 #ifdef _MSC_VER
@@ -31,23 +31,22 @@
 int main(void)
 {
     /* 변수 선언 및 초기화 */
-    int a = 20, b = 10;
+    int hour;
+    int min;
+    int sec;
+    double time = 0;
 
     /*        입 력       */
+    printf("시간을 입력 : ");
+    scanf("%lf", &time);
 
     /*        처 리       */
-    // if(a>10)
-    // {
-    //     if(b>=0)
-    //         b=1;
-    //     else
-    //         b=-1;
-    // }
-
-    b = (a > 10) ? ((b >= 0) ? 1 : -1) : b;
+    hour = (int)time;
+    min = (int)((time - hour) * 60);
+    sec = (int)(((time - hour) * 60 - min) * 60);
 
     /*        출 력       */
-    printf("a : %d, b : %d\n", a, b);
+    printf("%d시간 %d분 %d초\n", hour, min, sec);
 
     /* 함수 종료 */
     return 0;

@@ -1,10 +1,10 @@
 /*
-    제작 시간 : 0221_20:37
-    유형 : 예제
-    제목 : 중첩된 if문
+    제작 시간 : 0221_18:32
+    유형 : 연습
+    제목 : p146 2
 
-    개념
-    -
+    문제 설명
+    - 야구장 좌석 70, 입장객 65명일때 입장률 표시 프로그램
 */
 
 #ifdef _MSC_VER
@@ -31,23 +31,21 @@
 int main(void)
 {
     /* 변수 선언 및 초기화 */
-    int a = 20, b = 10;
+    int seats = 0;
+    int audience = 0;
+    double rate = 0.0;
 
     /*        입 력       */
+    printf("좌석 수 : ");
+    scanf("%d", &seats);
+    printf("입장객 수 : ");
+    scanf("%d", &audience);
 
     /*        처 리       */
-    // if(a>10)
-    // {
-    //     if(b>=0)
-    //         b=1;
-    //     else
-    //         b=-1;
-    // }
-
-    b = (a > 10) ? ((b >= 0) ? 1 : -1) : b;
+    rate = (double)audience / (double)seats * 100;
 
     /*        출 력       */
-    printf("a : %d, b : %d\n", a, b);
+    printf("입장률 : %.1lf%%\n", rate);
 
     /* 함수 종료 */
     return 0;

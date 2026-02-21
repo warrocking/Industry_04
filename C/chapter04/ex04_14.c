@@ -1,9 +1,12 @@
 /*
-    제작 시간 : 0221_20:37
+    제작 시간 : 0221_17:50
     유형 : 예제
-    제목 : 중첩된 if문
+    제목 : 연산자 우선순위와 연산 방향
 
-    개념
+    개념) :
+    -
+    -
+    -
     -
 */
 
@@ -31,23 +34,25 @@
 int main(void)
 {
     /* 변수 선언 및 초기화 */
-    int a = 20, b = 10;
+    int a = 10, b = 5;
+    int res;
 
     /*        입 력       */
 
     /*        처 리       */
-    // if(a>10)
-    // {
-    //     if(b>=0)
-    //         b=1;
-    //     else
-    //         b=-1;
-    // }
+    res = a / b * 2;
+    printf("res = %d\n", res);
 
-    b = (a > 10) ? ((b >= 0) ? 1 : -1) : b;
+    res = ++a * 3;
+    printf("res = %d\n", res);
+
+    res = a > b && a != 5;
+    printf("res = %d\n", res);
+
+    res = a % 3 == 0;
+    printf("res = %d\n", res);
 
     /*        출 력       */
-    printf("a : %d, b : %d\n", a, b);
 
     /* 함수 종료 */
     return 0;

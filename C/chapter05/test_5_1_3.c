@@ -1,10 +1,11 @@
 /*
-    제작 시간 : 0221_20:37
-    유형 : 예제
-    제목 : 중첩된 if문
+    제작 시간 : 0221_20:43
+    유형 : 연습
+    제목 : p164 3
 
-    개념
-    -
+    문제 설명
+    - 키가 187.5cm 이상이고 몸무게가 80.0kg 미만이면 ok 출력, 그 외의 경우는 cancel을 출력함\
+    - double형으로 초기화
 */
 
 #ifdef _MSC_VER
@@ -31,23 +32,22 @@
 int main(void)
 {
     /* 변수 선언 및 초기화 */
-    int a = 20, b = 10;
+    double height;
+    double weight;
 
     /*        입 력       */
+    printf("키 입력 : ");
+    scanf("%lf", &height);
+    printf("몸무게 입력 : ");
+    scanf("%lf", &weight);
 
     /*        처 리       */
-    // if(a>10)
-    // {
-    //     if(b>=0)
-    //         b=1;
-    //     else
-    //         b=-1;
-    // }
-
-    b = (a > 10) ? ((b >= 0) ? 1 : -1) : b;
+    if (height >= 187.5 && weight < 80.0)
+        printf("ok\n");
+    else
+        printf("cancel\n");
 
     /*        출 력       */
-    printf("a : %d, b : %d\n", a, b);
 
     /* 함수 종료 */
     return 0;

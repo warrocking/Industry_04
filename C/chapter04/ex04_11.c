@@ -19,12 +19,18 @@
 int main(void)
 {
     // 변수 선언 및 초기화
+    int a = 10;
+    int b = 20;
+    int res;
 
     // 데이터 준비 및 입력
+    res = (++a, ++b);
 
     // 로직 처리
 
     // 결과 출력
+    printf("a : %d, b : %d\n", a, b);
+    printf("res : %d\n", res);
 
     // 함수종료
     return 0;
